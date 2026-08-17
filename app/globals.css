@@ -1,0 +1,65 @@
+/* Tailwind CSS v4 — CSS-first configuration */
+@import "tailwindcss";
+
+/* ── Custom theme tokens ─────────────────────────────────────────────────── */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-bg: #0B192C;
+  --color-brand-darker: #080f1a;
+  --color-brand-card: #0d1c2e;
+}
+
+/* ── Base resets ─────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #0B192C;
+  color: #cbd5e1;
+  min-height: 100vh;
+}
+
+/* ── Custom scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B192C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ── Scrollbar hide utility ──────────────────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Selection highlight ─────────────────────────────────────────────────── */
+::selection {
+  background-color: #0ea5e9;
+  color: #fff;
+}
