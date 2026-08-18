@@ -67,7 +67,7 @@ export async function POST(request) {
     const res = await generateGroqCompletion({
       messages: [{ role: 'user', content: prompt }],
       systemPrompt: 'You are a professional SEO copywriter. You output clean raw JSON only without markdown code blocks.',
-      model: 'llama-3.3-70b-versatile',
+      model: 'groq/compound',
       temperature: 0.5,
       maxTokens: 3500,
     });

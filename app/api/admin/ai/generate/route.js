@@ -43,7 +43,7 @@ export async function POST(request) {
     const res = await generateGroqCompletion({
       messages: [{ role: 'user', content: prompt }],
       systemPrompt: 'You output clean JSON only without markdown code blocks.',
-      model: 'llama-3.3-70b-versatile',
+      model: 'groq/compound',
       temperature: 0.4,
     });
 

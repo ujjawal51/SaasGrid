@@ -118,7 +118,7 @@ export async function POST(request) {
         const groqResult = await generateGroqCompletion({
           messages: chatMessages,
           systemPrompt,
-          model: 'llama-3.3-70b-versatile',
+          model: 'groq/compound',
           temperature: 0.5,
         });
 
